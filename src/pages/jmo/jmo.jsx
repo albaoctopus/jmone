@@ -41,7 +41,7 @@ const Jmo = () => {
       <Showcase3Dark/>
      
      
-      <Clients1 theme="dark" subBG />
+      
       <CallToAction />
       <ContactSection/>
     </DarkTheme>

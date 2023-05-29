@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ShowcassesFullScreenData from "../../data/showcases-full-screen-slider.json";
 import SwiperCore, { Navigation, Parallax, Mousewheel } from "swiper";
@@ -84,24 +83,16 @@ const ShowcasesFullScreenCircleSlide = () => {
                     <div className="caption ontop valign">
                       <div className="o-hidden">
                         <h1 data-swiper-parallax="-2000">
-                          <Link href="/project-details2/project-details2-dark">
-                            <a>
-                              <div className="stroke">{slide.title.first}</div>
-                              <span>{slide.title.second}</span>
-                            </a>
-                          </Link>
+                          <div className="stroke">{slide.title.first}</div>
+                          <span>{slide.title.second}</span>
                         </h1>
                       </div>
                     </div>
                     <div className="copy-cap valign">
                       <div className="cap">
                         <h1 data-swiper-parallax="-2000">
-                          <Link href="/project-details2/project-details2-dark">
-                            <a>
-                              <div className="stroke">{slide.title.first}</div>
-                              <span>{slide.title.second}</span>
-                            </a>
-                          </Link>
+                          <div className="stroke">{slide.title.first}</div>
+                          <span>{slide.title.second}</span>
                         </h1>
                       </div>
                     </div>
@@ -142,3 +133,4 @@ const ShowcasesFullScreenCircleSlide = () => {
 };
 
 export default ShowcasesFullScreenCircleSlide;
+
