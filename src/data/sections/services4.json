@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Art Concept",
+        "icon": "pe-7s-gleam",
+        "content": "From idea to implementation, we transform your creative vision into unique NFT designs, bridging the gap between art and technology."
+    },
+    {
+      "id": 2,
+      "title": "Tokenomics",
+      "icon": "pe-7s-phone",
+      "content": "Our team carefully tailors the token economy of your NFT project, driving maximum value and usefulness for your digital assets."
+    },
+    {
+      "id": 3,
+      "title": "IT Development",
+      "icon": "pe-7s-magic-wand",
+      "content": "We offer extensive IT services, from creating secure smart contracts to developing bespoke NFT marketplaces, ensuring your project's success."
+    }
+]

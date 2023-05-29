@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": { "first": "AI", "second": "Art" },
+    "image": "/img/portfolio/full/pla03.png",
+    "sub": "Design"
+  },
+  {
+    "id": 2,
+    "title": { "first": "Generative", "second": "Art" },
+    "image": "/img/portfolio/full/NFT01.png",
+    "sub": "Design"
+  },
+  {
+    "id": 3,
+    "title": { "first": "Animation", "second": "Art" },
+    "image": "/img/portfolio/full/skeletons.gif",
+    "sub": "Design"
+  },
+  {
+    "id": 4,
+    "title": { "first": "3D", "second": "Art" },
+    "image": "/img/portfolio/full/fro4.png",
+    "sub": "Design"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "first": "NFT FOR",
+      "second": "SPORTS"
+    },
+    "image": "/img/slid/011.jpg"
+  },
+  {
+    "id": 2,
+    "title": {
+      "first": "NFT FOR",
+      "second": "Celebrities"
+    },
+    "image": "/img/slid/012.jpg"
+  },
+  {
+    "id": 3,
+    "title": {
+      "first": "NFT FOR",
+      "second": "Brands"
+    },
+    "image": "/img/slid/013.jpg"
+  }
+]
