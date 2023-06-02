@@ -5,6 +5,7 @@ import axios from 'axios';
 
 const ContactSection = () => {
   const messageRef = React.useRef(null);
+  
   function validateEmail(value) {
     let error;
     if (!value) {
@@ -14,7 +15,30 @@ const ContactSection = () => {
     }
     return error;
   }
-  const sendMessage = (ms) => new Promise((r) => setTimeout(r, ms));
+  
+  const sendMessage = async (values) => {
+    const chatId = "-1001902830989";
+    const text = `Name: ${values.name}\nEmail: ${values.email}\nMessage: ${values.message}`;
+    const url = `https://api.telegram.org/bot6202810584:AAGHdWk-BQlvl8e9IZYCS9MOxheMV4m-qPQ/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
+
+    try {
+      const response = await axios.post(url);
+      if (response.status === 200) {
+        messageRef.current.innerText = "Your Message has been successfully sent. I will contact you soon.";
+      } else {
+        throw new Error("Message not sent");
+      }
+    } catch (error) {
+      console.log(error);
+      messageRef.current.innerText = "Error sending message. Please try again later.";
+    }
+
+    // clear message
+    setTimeout(() => {
+      messageRef.current.innerText = "";
+    }, 2000);
+  };
+
   return (
     <section className="contact-sec section-padding">
       <div className="container">
@@ -39,28 +63,11 @@ const ContactSection = () => {
                   message: "",
                 }}
                 onSubmit={async (values) => {
-                  await sendMessage(500);
-                  // alert(JSON.stringify(values, null, 2));
-                  // show message
-                  const formData = new FormData();
-
-                  formData.append('name', values.name);
-                  formData.append('email', values.email);
-                  formData.append('message', values.message);
-                  const res = await axios.post('/contact.php', formData);
-
-                  if (!res) return;
-
-                  messageRef.current.innerText =
-                    "Your Message has been successfully sent. I will contact you soon.";
+                  await sendMessage(values);
                   // Reset the values
                   values.name = "";
                   values.email = "";
                   values.message = "";
-                  // clear message
-                  setTimeout(() => {
-                    messageRef.current.innerText = "";
-                  }, 2000);
                 }}
               >
                 {({ errors, touched }) => (
@@ -131,3 +138,4 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
