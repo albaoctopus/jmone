@@ -17,9 +17,10 @@ const ContactSection = () => {
   }
   
   const sendMessage = async (values) => {
-    const chatId = "-1001902830989";
+    const chatId = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
+    const botToken = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN;
     const text = `Name: ${values.name}\nEmail: ${values.email}\nMessage: ${values.message}`;
-    const url = `https://api.telegram.org/bot6202810584:AAGHdWk-BQlvl8e9IZYCS9MOxheMV4m-qPQ/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(text)}`;
 
     try {
       const response = await axios.post(url);
@@ -138,5 +139,6 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
 
 
